@@ -1,0 +1,111 @@
+package com.klef.soa.repository;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.data.jpa.test.autoconfigure.DataJpaTest;
+
+import com.klef.soa.entity.Achievement;
+
+@DataJpaTest
+public class AchievementRepositoryTest {
+
+    @Autowired
+    private AchievementRepository repository;
+
+    private Achievement testAchievement1;
+    private Achievement testAchievement2;
+
+    @BeforeEach
+    void setUp() {
+        repository.deleteAll();
+
+        Achievement a1 = new Achievement();
+        a1.setName("Hackathon Winner");
+        a1.setType("Technical");
+        a1.setStatus("Completed");
+        a1.setLocation("Hyderabad");
+        testAchievement1 = repository.save(a1);
+
+        Achievement a2 = new Achievement();
+        a2.setName("Research Paper");
+        a2.setType("Technical");
+        a2.setStatus("Published");
+        a2.setLocation("Vijayawada");
+        testAchievement2 = repository.save(a2);
+    }
+
+    // 1. Find All: Call findAll(); verify the returned list and expected records.
+    @Test
+    void testFindAllAchievements() {
+        List<Achievement> achievements = repository.findAll();
+        assertNotNull(achievements);
+        assertFalse(achievements.isEmpty());
+        assertEquals(2, achievements.size());
+        System.out.println("Total Achievements found: " + achievements.size());
+    }
+
+    // 2. Find by ID: Call findById() with an existing ID; verify the record and ID. 
+    // Also test a non-existing ID and verify the result is empty.
+    @Test
+    void testFindAchievementById() {
+        Optional<Achievement> found = repository.findById(testAchievement1.getAchievementId());
+        assertTrue(found.isPresent());
+        assertEquals(testAchievement1.getAchievementId(), found.get().getAchievementId());
+        System.out.println("Found Achievement ID: " + found.get().getAchievementId());
+        System.out.println("Achievement Name: " + found.get().getName());
+
+        Optional<Achievement> notFound = repository.findById(999999L);
+        assertTrue(notFound.isEmpty());
+        System.out.println("Non-existing ID result is empty: " + notFound.isEmpty());
+    }
+
+    // 3. Find by Derived Query: Test a method based on an entity property (findByName); verify matching result.
+    @Test
+    void testFindAchievementByName() {
+        List<Achievement> achievements = repository.findByName("Hackathon Winner");
+        assertNotNull(achievements);
+        assertFalse(achievements.isEmpty());
+        assertEquals("Hackathon Winner", achievements.get(0).getName());
+        System.out.println("Found by Name: " + achievements.get(0).getName());
+    }
+
+    // 4. Count: Call count() and verify the count using deterministic test data.
+    @Test
+    void testTotalAchievementCount() {
+        long count = repository.count();
+        assertEquals(2L, count);
+        System.out.println("Total Achievement Count: " + count);
+    }
+
+    // 5. Entity Details / Property-Based Result: Verify required properties are not null. 
+    // Test category-based repository method (findByType).
+    @Test
+    void testAchievementDetailsAndCategory() {
+        Optional<Achievement> found = repository.findById(testAchievement1.getAchievementId());
+        assertTrue(found.isPresent());
+        Achievement achievement = found.get();
+
+        assertNotNull(achievement.getAchievementId());
+        assertNotNull(achievement.getName());
+        assertNotNull(achievement.getType());
+        assertNotNull(achievement.getStatus());
+        assertNotNull(achievement.getLocation());
+        assertNotNull(achievement.getCreatedAt());
+
+        System.out.println("Achievement Details - Name: " + achievement.getName() + ", Location: " + achievement.getLocation());
+
+        List<Achievement> byType = repository.findByType("Technical");
+        assertNotNull(byType);
+        assertEquals(2, byType.size());
+        System.out.println("Achievements by Category (Technical): " + byType.size());
+    }
+}

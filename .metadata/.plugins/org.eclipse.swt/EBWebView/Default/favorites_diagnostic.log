@@ -1,0 +1,29 @@
+2026-11-07 02:01:42.735: [INFO] CurrentProfilePath: C:\SOA\ExamWorksSpace\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-11-07 02:01:42.735: [INFO] Profiles total count: 1
+2026-11-07 02:01:42.735: [INFO] Profile: name=Profile 1 path=C:\SOA\ExamWorksSpace\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=null
+2026-11-07 02:01:42.735: [INFO] LastUsedProfileDir: C:\SOA\ExamWorksSpace\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-11-07 02:01:42.735: [INFO] OnDoneLoading sync enabled: 0
+2026-11-07 02:01:42.735: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-11-07 02:01:42.735: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-11-07 02:01:42.735: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-11-07 02:01:52.803: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-11-07 02:01:53.487: [INFO] CurrentProfilePath: C:\SOA\ExamWorksSpace\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-11-07 02:01:53.487: [INFO] Profiles total count: 1
+2026-11-07 02:01:53.488: [INFO] Profile: name=Profile 1 path=C:\SOA\ExamWorksSpace\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-11-07T02:01:43.331Z
+2026-11-07 02:01:53.488: [INFO] LastUsedProfileDir: C:\SOA\ExamWorksSpace\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-11-07 02:01:53.488: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\SOA\ExamWorksSpace\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-11-07T02:01:43.331Z
+2026-11-07 02:01:53.488: [INFO] OnDoneLoading sync enabled: 0
+2026-11-07 02:01:53.488: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-11-07 02:01:53.488: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-11-07 02:01:53.488: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-11-07 02:04:46.591: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-11-07 02:19:12.007: [INFO] CurrentProfilePath: C:\SOA\ExamWorksSpace\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-11-07 02:19:12.007: [INFO] Profiles total count: 1
+2026-11-07 02:19:12.007: [INFO] Profile: name=Profile 1 path=C:\SOA\ExamWorksSpace\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-11-07T02:04:44.329Z
+2026-11-07 02:19:12.007: [INFO] LastUsedProfileDir: C:\SOA\ExamWorksSpace\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-11-07 02:19:12.007: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\SOA\ExamWorksSpace\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-11-07T02:04:44.329Z
+2026-11-07 02:19:12.007: [INFO] OnDoneLoading sync enabled: 0
+2026-11-07 02:19:12.007: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-11-07 02:19:12.007: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-11-07 02:19:12.007: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-11-07 03:10:25.081: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
