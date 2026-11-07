@@ -20,10 +20,7 @@ services:
       retries: 10
       start_period: 10s
     networks:
-      microservices-network:
-        aliases:
-          - postgresdb
-          - postgres-db
+     - microservices-network
 
   exam-service:
     image: dheeraj200579/docker-skill-exam-2400032903:latest
